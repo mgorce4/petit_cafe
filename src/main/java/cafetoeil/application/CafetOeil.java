@@ -3,9 +3,11 @@ package cafetoeil.application;
 import cafetoeil.model.Boisson;
 import cafetoeil.model.cafedebase.Colombia;
 import cafetoeil.model.cafedebase.Espresso;
+import cafetoeil.model.cafedebase.Sumatra;
 import cafetoeil.model.supplement.Caramel;
 import cafetoeil.model.supplement.Chantilly;
 import cafetoeil.model.supplement.Chocolat;
+import cafetoeil.model.supplement.Lait;
 
 public class CafetOeil {
  
@@ -24,7 +26,13 @@ public class CafetOeil {
 		Boisson autreColombiaAmeliore = new Colombia();
 		autreColombiaAmeliore = new Chocolat(autreColombiaAmeliore);
 		autreColombiaAmeliore = new Chocolat(autreColombiaAmeliore);
+
 		System.out.println(autreColombiaAmeliore.description() 
 				 + " : " + autreColombiaAmeliore.prix()+ " €");
+		
+		Boisson sumatraAmeliore = new Sumatra();
+		sumatraAmeliore = new Lait(sumatraAmeliore);
+		System.out.println(sumatraAmeliore.description() 
+				+ " : " + sumatraAmeliore.prix() + " €");
 	}
 }
